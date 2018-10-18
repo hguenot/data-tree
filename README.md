@@ -5,6 +5,8 @@ This library provides a tree structure via discrete Traits.
 
 It is intended to be used by other libraries.  
 
+(Fork of https://github.com/timostamm/data-tree - PHP 7 support and releases)
+
 
 Continuous integration
 ------------
