@@ -2,10 +2,8 @@
 
 namespace TS\Data\Tree;
 
+class Node implements INode {
 
-class Node
-{
-	
 	use NodeTrait;
 
 }

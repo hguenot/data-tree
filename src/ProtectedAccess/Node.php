@@ -2,10 +2,8 @@
 
 namespace TS\Data\Tree\ProtectedAccess;
 
+abstract class Node {
 
-abstract class Node
-{
-	
 	use NodeTrait;
 
 }
