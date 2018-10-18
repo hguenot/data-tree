@@ -6,6 +6,13 @@ This library provides a tree structure via discrete Traits.
 It is intended to be used by other libraries.  
 
 
+Continuous integration
+------------
+[![Build Status](https://travis-ci.org/hguenot/data-tree.svg)](https://travis-ci.org/hguenot/phpstream) 
+[![Code coverage](https://img.shields.io/codecov/c/github/hguenot/data-tree.svg)](https://codecov.io/github/hguenot/data-tree) 
+[![GitHub version](https://img.shields.io/github/release/hguenot/data-tree.svg)](https://github.com/hguenot/data-tree/releases) 
+[![Packagist version](https://img.shields.io/packagist/v/hguenot/data-tree.svg)](https://packagist.org/packages/hguenot/data-tree)
+
 ### ChildrenTrait
 
 Add, acces and remove child nodes using this trait.
