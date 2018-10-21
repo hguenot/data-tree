@@ -21,6 +21,6 @@
 	},
 	"scripts" : {
 		"test" : "phpunit --coverage-clover=reports/coverage.xml --log-junit=reports/test-report.xml --coverage-html reports/coverage",
-		"codecov" : "codecov -t \"572fd1cd-5ff6-4296-be69-31752887701e\" -f \"report/coverage.xml\""
+		"codecov" : "codecov -t \"572fd1cd-5ff6-4296-be69-31752887701e\" -f \"reports/coverage.xml\""
 	}
 }
