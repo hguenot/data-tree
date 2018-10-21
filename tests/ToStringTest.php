@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 use TS\Data\Tree\Tests\Fixtures\BarNode;
 use TS\Data\Tree\Tests\Fixtures\FooNode;
 
-
 /**
  *
  * @author Timo Stamm <ts@timostamm.de>
@@ -30,6 +29,7 @@ class ToStringTest extends TestCase
 
 	public function testFooWithAttribute()
 	{
+		$fd = fopen(__FILE__, 'r');
 		$foo = new FooNode();
 		$foo->setAttribute('a', 'A');
 		$foo->setAttribute('num', 123);
@@ -37,7 +37,9 @@ class ToStringTest extends TestCase
 		$foo->setAttribute('obj', $foo);
 		$foo->setAttribute('null', null);
 		$foo->setAttribute('bool', true);
-		$this->assertEquals('[FooNode a="A", num=123, arr=array(2), obj=TS\Data\Tree\Tests\Fixtures\FooNode, null=null, bool=true]', $foo->__toString());
+		$foo->setAttribute('fd', $fd);
+		$this->assertEquals('[FooNode a="A", num=123, arr=array(2), obj=TS\Data\Tree\Tests\Fixtures\FooNode, null=null, bool=true, fd=resource]', $foo->__toString());
+		fclose($fd);
 	}
 
 }

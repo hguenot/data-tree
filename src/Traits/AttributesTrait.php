@@ -5,7 +5,9 @@
  * @license AGPLv3.0 https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-namespace TS\Data\Tree;
+namespace TS\Data\Tree\Traits;
+
+use TS\Data\Tree\Interfaces\Attributes;
 
 trait AttributesTrait {
 
@@ -17,11 +19,12 @@ trait AttributesTrait {
 	 * @param string $name  Attribute name
 	 * @param mixed  $value Attribute value
 	 *
-	 * @return self
+	 * @return Attributes
 	 */
-	public function setAttribute(string $name, $value): self {
+	public function setAttribute(string $name, $value): Attributes {
 		$this->node_attributes[$name] = $value;
 
+		/** @var Attributes $this */
 		return $this;
 	}
 
@@ -53,13 +56,14 @@ trait AttributesTrait {
 	 *
 	 * @param string $name
 	 *
-	 * @return self
+	 * @return Attributes
 	 */
-	public function removeAttribute(string $name): self {
+	public function removeAttribute(string $name): Attributes {
 		if ($this->hasAttribute($name)) {
 			unset($this->node_attributes[$name]);
 		}
 
+		/** @var Attributes $this */
 		return $this;
 	}
 

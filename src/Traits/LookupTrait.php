@@ -5,32 +5,35 @@
  * @license AGPLv3.0 https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-namespace TS\Data\Tree;
+namespace TS\Data\Tree\Traits;
+
+use TS\Data\Tree\Interfaces\Lookup;
+use TS\Data\Tree\Interfaces\Node;
 
 trait LookupTrait {
 
 	/**
 	 * Get all children.
 	 *
-	 * @return INode[] Children nodes
+	 * @return Lookup[] Children nodes
 	 */
 	abstract public function getChildren(): array;
 
 	/**
 	 * Get parent node.
 	 *
-	 * @return INode|null Parent node
+	 * @return Node|null Parent node
 	 */
-	abstract public function getParent(): ?INode;
+	abstract public function getParent(): ?Node;
 
 	/**
 	 * Find a specific descendant.
 	 *
 	 * @param callable $where Called with a node as single argument, must return true or false.
 	 *
-	 * @return self|null
+	 * @return Node|null
 	 */
-	public function descendant(callable $where): ?self {
+	public function descendant(callable $where): ?Node {
 		foreach ($this->descendants($where) as $node) {
 			return $node;
 		}
@@ -43,9 +46,9 @@ trait LookupTrait {
 	 *
 	 * @param callable $where Called with a node as single argument, must return true or false.
 	 *
-	 * @return self|null
+	 * @return Node|null
 	 */
-	public function ancestor(callable $where): ?self {
+	public function ancestor(callable $where): ?Node {
 		foreach ($this->ancestors($where) as $node) {
 			return $node;
 		}
@@ -58,9 +61,9 @@ trait LookupTrait {
 	 *
 	 * @param callable $where Called with a node as single argument, must return true or false.
 	 *
-	 * @return self|null
+	 * @return Node|null
 	 */
-	public function child(callable $where): ?self {
+	public function child(callable $where): ?Node {
 		foreach ($this->children($where) as $node) {
 			return $node;
 		}
@@ -73,9 +76,9 @@ trait LookupTrait {
 	 *
 	 * @param callable $where Called with a node as single argument, must return true or false.
 	 *
-	 * @return self|null
+	 * @return Node|null
 	 */
-	public function sibling(callable $where): ?self {
+	public function sibling(callable $where): ?Node {
 		foreach ($this->children($where) as $node) {
 			return $node;
 		}
@@ -90,7 +93,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function children(callable $where) {
+	public function children(callable $where): \Generator {
 		foreach ($this->getChildren() as $node) {
 			if ($where($node)) {
 				yield $node;
@@ -105,7 +108,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function ancestors(callable $where = null) {
+	public function ancestors(callable $where = null): \Generator {
 		$p = $this;
 		while ($p->getParent()) {
 			$p = $p->getParent();
@@ -122,7 +125,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function descendants(callable $where = null) {
+	public function descendants(callable $where = null): \Generator {
 		foreach ($this->getChildren() as $child) {
 			if ($where === null || $where($child)) {
 				yield $child;
@@ -140,7 +143,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function siblings(callable $where = null) {
+	public function siblings(callable $where = null): \Generator {
 		$p = $this->getParent();
 		if ($p !== null) {
 			foreach ($p->getChildren() as $child) {
@@ -156,9 +159,9 @@ trait LookupTrait {
 
 	/**
 	 * Find the root node.
-	 * @return self
+	 * @return Lookup
 	 */
-	public function findRootNode() {
+	public function findRootNode(): Node {
 		$p = $this;
 		while ($p->getParent()) {
 			$p = $p->getParent();

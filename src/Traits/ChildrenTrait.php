@@ -5,26 +5,33 @@
  * @license AGPLv3.0 https://www.gnu.org/licenses/agpl-3.0.txt
  */
 
-namespace TS\Data\Tree;
+namespace TS\Data\Tree\Traits;
 
 use InvalidArgumentException;
 use LogicException;
 use OutOfRangeException;
+use TS\Data\Tree\Interfaces\Node;
 
+/**
+ * @see Node
+ */
 trait ChildrenTrait {
 
+	/** @var Node[] */
 	private $node_children = [];
 
+	/** @var int|null */
 	private $node_childIndex;
 
+	/** @var Node|null */
 	private $node_parent;
 
 	/**
 	 * Get the parent node.
 	 *
-	 * @return INode|null
+	 * @return Node|null
 	 */
-	public function getParent(): ?INode {
+	public function getParent(): ?Node {
 		return $this->node_parent;
 	}
 
@@ -33,9 +40,9 @@ trait ChildrenTrait {
 	 *
 	 * @param mixed $node Node to be added as child of current
 	 *
-	 * @return self Current node
+	 * @return Node Current node
 	 */
-	public function addChild(self $node): self {
+	public function addChild(Node $node): Node {
 		$index = count($this->node_children);
 
 		return $this->insertChildAt($index, $node);
@@ -50,9 +57,9 @@ trait ChildrenTrait {
 	 * @throws \LogicException If new child already linked to any parent
 	 * @throws \OutOfRangeException If `$index` is out of range
 	 *
-	 * @return self Current node
+	 * @return Node Current node
 	 */
-	public function insertChildAt(int $index, self $node): self {
+	public function insertChildAt(int $index, Node $node): Node {
 		if ($node->getParent() != null) {
 			$msg = sprintf('Cannot add %s to %s because it already is a child of %s', $node, $this, $node->getParent());
 			throw new LogicException($msg);
@@ -81,6 +88,7 @@ trait ChildrenTrait {
 			$this->node_children[$i]->childIndex = $i;
 		}
 
+		/**@var Node $this */
 		return $this;
 	}
 
@@ -91,15 +99,16 @@ trait ChildrenTrait {
 	 *
 	 * @throws \InvalidArgumentException If node to remove is not a child of current node
 	 *
-	 * @return self Current node
+	 * @return Node Current node
 	 */
-	public function removeChild(self $node): self {
+	public function removeChild(Node $node): Node {
 		if ($node->getParent() !== $this) {
 			$msg = sprintf('Cannot remove %s from %s because it is not a child.', $node, $this);
 			throw new InvalidArgumentException($msg);
 		}
 		$this->removeChildAt($node->getChildIndex());
 
+		/**@var Node $this */
 		return $this;
 	}
 
@@ -108,15 +117,16 @@ trait ChildrenTrait {
 	 *
 	 * @throws LogicException If current node is not a child
 	 *
-	 * @return self Current node
+	 * @return Node Current node
 	 */
-	public function remove(): self {
+	public function remove(): Node {
 		$p = $this->getParent();
 		if (null == $p) {
 			throw new LogicException();
 		}
 		$p->removeChildAt($this->getChildIndex());
 
+		/**@var Node $this */
 		return $this;
 	}
 
@@ -127,9 +137,9 @@ trait ChildrenTrait {
 	 *
 	 * @throws \OutOfRangeException If specified index is out of range
 	 *
-	 * @return self Removed node
+	 * @return Node Removed node
 	 */
-	public function removeChildAt($index): self {
+	public function removeChildAt($index): Node {
 		$node = $this->getChildAt($index);
 
 		// re-wire new node and remove
@@ -168,9 +178,9 @@ trait ChildrenTrait {
 	 *
 	 * @throws \OutOfRangeException If specified index is out of range
 	 *
-	 * @return self The child node
+	 * @return Node The child node
 	 */
-	public function getChildAt(int $index): self {
+	public function getChildAt(int $index): Node {
 		if ($index < 0) {
 			throw new OutOfRangeException();
 		}
@@ -184,7 +194,7 @@ trait ChildrenTrait {
 	/**
 	 * Get all children.
 	 *
-	 * @return INode[] Children nodes
+	 * @return Node[] Children nodes
 	 */
 	public function getChildren(): array {
 		return array_merge([], $this->node_children);

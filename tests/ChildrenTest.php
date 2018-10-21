@@ -6,7 +6,6 @@ namespace TS\Data\Tree\Test;
 use PHPUnit\Framework\TestCase;
 use TS\Data\Tree\Node;
 
-
 /**
  *
  * @author Timo Stamm <ts@timostamm.de>
@@ -39,6 +38,24 @@ class ChildrenTest extends TestCase
 		$this->assertEquals(0, $this->a->getChildIndex());
 		$this->assertEquals(1, $this->c->getChildIndex());
 		$this->assertNull($this->b->getParent());
+
+		try {
+			$this->b->remove();
+			$this->fail('Must throw \LogicException');
+		} catch(\LogicException $e) {
+
+		} catch(\Exception $e) {
+			$this->fail('Must throw \LogicException');
+		}
+
+		try {
+			$this->b->getChildIndex();
+			$this->fail('Must throw \LogicException');
+		} catch(\LogicException $e) {
+
+		} catch(\Exception $e) {
+			$this->fail('Must throw \LogicException');
+		}
 	}
 	
 	public function testRemoveChild()
@@ -130,12 +147,16 @@ class ChildrenTest extends TestCase
 		$this->root->getChildAt(-1);
 	}
 
+	/** @var Node */
 	private $root;
 
+	/** @var Node */
 	private $a;
 
+	/** @var Node */
 	private $b;
 
+	/** @var Node */
 	private $c;
 
 	protected function setUp()

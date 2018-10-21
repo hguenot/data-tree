@@ -6,7 +6,6 @@ namespace TS\Data\Tree\Test;
 use PHPUnit\Framework\TestCase;
 use TS\Data\Tree\Node;
 
-
 /**
  *
  * @author Timo Stamm <ts@timostamm.de>

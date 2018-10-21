@@ -7,7 +7,7 @@
 
 namespace TS\Data\Tree\ProtectedAccess;
 
-use TS\Data\Tree\ChildrenTrait as Source;
+use TS\Data\Tree\Traits\ChildrenTrait as Source;
 
 trait ChildrenTrait {
 

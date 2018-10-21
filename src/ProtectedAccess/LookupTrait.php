@@ -7,7 +7,7 @@
 
 namespace TS\Data\Tree\ProtectedAccess;
 
-use TS\Data\Tree\LookupTrait as Source;
+use TS\Data\Tree\Traits\LookupTrait as Source;
 
 trait LookupTrait {
 

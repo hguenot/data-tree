@@ -6,9 +6,8 @@ namespace TS\Data\Tree\Test\ProtectedAccess;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use ReflectionMethod;
-use TS\Data\Tree\ProtectedAccess\NodeTrait;
 use TS\Data\Tree\ProtectedAccess\Node;
-
+use TS\Data\Tree\ProtectedAccess\NodeTrait;
 
 class N
 {

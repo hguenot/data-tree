@@ -3,10 +3,9 @@ vendor/*
 composer.phar
 /vendor/
 .DS_Store
-coverage.xml
-test-report.xml
 data-tree.iml
 data-tree.ipr
 data-tree.iws
 .project
 .settings
+.reports

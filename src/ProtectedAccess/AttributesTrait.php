@@ -7,7 +7,7 @@
 
 namespace TS\Data\Tree\ProtectedAccess;
 
-use TS\Data\Tree\AttributesTrait as Source;
+use TS\Data\Tree\Traits\AttributesTrait as Source;
 
 trait AttributesTrait {
 
