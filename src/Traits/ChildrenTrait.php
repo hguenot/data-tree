@@ -139,7 +139,7 @@ trait ChildrenTrait {
 	 *
 	 * @return Node Removed node
 	 */
-	public function removeChildAt($index): Node {
+	public function removeChildAt(int $index): Node {
 		$node = $this->getChildAt($index);
 
 		// re-wire new node and remove
