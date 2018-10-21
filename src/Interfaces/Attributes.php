@@ -11,7 +11,7 @@ interface Attributes {
 	 *
 	 * @return Attributes
 	 */
-	public function setAttribute(string $name, $value): Attributes;
+	function setAttribute(string $name, $value): Attributes;
 
 	/**
 	 * Check if an attribute is set.
@@ -20,7 +20,7 @@ interface Attributes {
 	 *
 	 * @return bool
 	 */
-	public function hasAttribute(string $name): bool;
+	function hasAttribute(string $name): bool;
 
 	/**
 	 * Get an attribute value.
@@ -30,7 +30,7 @@ interface Attributes {
 	 *
 	 * @return mixed|null
 	 */
-	public function getAttribute(string $name, $default = null);
+	function getAttribute(string $name, $default = null);
 
 	/**
 	 * Remove an attribute.
@@ -39,13 +39,13 @@ interface Attributes {
 	 *
 	 * @return Attributes
 	 */
-	public function removeAttribute(string $name): Attributes;
+	function removeAttribute(string $name): Attributes;
 
 	/**
 	 * Get all attributes as an associative array.
 	 *
 	 * @return mixed[] Attributes value indexed by attribute name
 	 */
-	public function getAttributes(): array;
+	function getAttributes(): array;
 
 }
