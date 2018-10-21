@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1540089852">
-  <project timestamp="1540089852">
+<coverage generated="1540103026">
+  <project timestamp="1540103026">
+    <file name="E:\dev\data-tree\src/Interfaces/Attributes.php">
+      <metrics loc="51" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
     <file name="E:\dev\data-tree\src/Interfaces/Lookup.php">
       <metrics loc="88" ncloc="27" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
@@ -9,9 +12,6 @@
     </file>
     <file name="E:\dev\data-tree\src/Interfaces/Node.php">
       <metrics loc="45" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-    </file>
-    <file name="E:\dev\data-tree\src/Interfaces/WithAttributeNode.php">
-      <metrics loc="51" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="TS\Data\Tree">
       <file name="E:\dev\data-tree\src/Node.php">
