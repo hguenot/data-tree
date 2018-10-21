@@ -33,7 +33,7 @@ trait LookupTrait {
 	 *
 	 * @return Node|null
 	 */
-	public function descendant(callable $where): ?Node {
+	public function descendant(?callable $where): ?Node {
 		foreach ($this->descendants($where) as $node) {
 			return $node;
 		}
@@ -48,7 +48,7 @@ trait LookupTrait {
 	 *
 	 * @return Node|null
 	 */
-	public function ancestor(callable $where): ?Node {
+	public function ancestor(?callable $where): ?Node {
 		foreach ($this->ancestors($where) as $node) {
 			return $node;
 		}
@@ -63,7 +63,7 @@ trait LookupTrait {
 	 *
 	 * @return Node|null
 	 */
-	public function child(callable $where): ?Node {
+	public function child(?callable $where): ?Node {
 		foreach ($this->children($where) as $node) {
 			return $node;
 		}
@@ -78,7 +78,7 @@ trait LookupTrait {
 	 *
 	 * @return Node|null
 	 */
-	public function sibling(callable $where): ?Node {
+	public function sibling(?callable $where): ?Node {
 		foreach ($this->children($where) as $node) {
 			return $node;
 		}
@@ -93,7 +93,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function children(callable $where): \Generator {
+	public function children(?callable $where): \Generator {
 		foreach ($this->getChildren() as $node) {
 			if ($where($node)) {
 				yield $node;
@@ -108,7 +108,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function ancestors(callable $where = null): \Generator {
+	public function ancestors(?callable $where = null): \Generator {
 		$p = $this;
 		while ($p->getParent()) {
 			$p = $p->getParent();
@@ -125,7 +125,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function descendants(callable $where = null): \Generator {
+	public function descendants(?callable $where = null): \Generator {
 		foreach ($this->getChildren() as $child) {
 			if ($where === null || $where($child)) {
 				yield $child;
@@ -143,7 +143,7 @@ trait LookupTrait {
 	 *
 	 * @return \Generator
 	 */
-	public function siblings(callable $where = null): \Generator {
+	public function siblings(?callable $where = null): \Generator {
 		$p = $this->getParent();
 		if ($p !== null) {
 			foreach ($p->getChildren() as $child) {

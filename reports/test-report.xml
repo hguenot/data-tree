@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="38" assertions="82" errors="0" failures="0" skipped="0" time="0.023451">
-    <testsuite name="TS\Data\Tree\Test\AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" tests="6" assertions="13" errors="0" failures="0" skipped="0" time="0.013907">
-      <testcase name="testSetAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="17" assertions="2" time="0.012008"/>
-      <testcase name="testRemoveAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="23" assertions="2" time="0.000894"/>
-      <testcase name="testHasAttributes" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="30" assertions="2" time="0.000072"/>
-      <testcase name="testGetAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="36" assertions="2" time="0.000502"/>
-      <testcase name="testGetAttributeDefault" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="42" assertions="3" time="0.000361"/>
-      <testcase name="testGetAttributes" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="49" assertions="2" time="0.000070"/>
+  <testsuite name="Project Test Suite" tests="38" assertions="82" errors="0" failures="0" skipped="0" time="0.016472">
+    <testsuite name="TS\Data\Tree\Test\AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" tests="6" assertions="13" errors="0" failures="0" skipped="0" time="0.011012">
+      <testcase name="testSetAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="17" assertions="2" time="0.009283"/>
+      <testcase name="testRemoveAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="23" assertions="2" time="0.000810"/>
+      <testcase name="testHasAttributes" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="30" assertions="2" time="0.000058"/>
+      <testcase name="testGetAttribute" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="36" assertions="2" time="0.000454"/>
+      <testcase name="testGetAttributeDefault" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="42" assertions="3" time="0.000339"/>
+      <testcase name="testGetAttributes" class="TS\Data\Tree\Test\AttributesTest" classname="TS.Data.Tree.Test.AttributesTest" file="E:\dev\data-tree\tests\AttributesTest.php" line="49" assertions="2" time="0.000068"/>
     </testsuite>
-    <testsuite name="TS\Data\Tree\Test\ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" tests="14" assertions="41" errors="0" failures="0" skipped="0" time="0.004307">
-      <testcase name="testGetChildren" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="17" assertions="10" time="0.000827"/>
-      <testcase name="testRemove" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="32" assertions="5" time="0.000225"/>
-      <testcase name="testRemoveChild" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="61" assertions="5" time="0.000078"/>
-      <testcase name="testRemoveChildInvalid" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="72" assertions="1" time="0.001449"/>
-      <testcase name="testRemoveChildAtOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="78" assertions="1" time="0.000295"/>
-      <testcase name="testRemoveChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="84" assertions="5" time="0.000283"/>
-      <testcase name="testAddChild" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="95" assertions="4" time="0.000122"/>
-      <testcase name="testAddChildAlreadyAdded" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="106" assertions="1" time="0.000254"/>
-      <testcase name="testInsertChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="112" assertions="2" time="0.000138"/>
-      <testcase name="testInsertChildOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="121" assertions="1" time="0.000129"/>
-      <testcase name="testInsertChildNegativeRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="126" assertions="1" time="0.000101"/>
-      <testcase name="testGetChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="132" assertions="3" time="0.000122"/>
-      <testcase name="testGetChildAtOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="139" assertions="1" time="0.000161"/>
-      <testcase name="testGetChildAtNegativeRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="144" assertions="1" time="0.000123"/>
+    <testsuite name="TS\Data\Tree\Test\ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" tests="14" assertions="41" errors="0" failures="0" skipped="0" time="0.002929">
+      <testcase name="testGetChildren" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="17" assertions="10" time="0.000691"/>
+      <testcase name="testRemove" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="32" assertions="5" time="0.000133"/>
+      <testcase name="testRemoveChild" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="61" assertions="5" time="0.000103"/>
+      <testcase name="testRemoveChildInvalid" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="72" assertions="1" time="0.001143"/>
+      <testcase name="testRemoveChildAtOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="78" assertions="1" time="0.000084"/>
+      <testcase name="testRemoveChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="84" assertions="5" time="0.000074"/>
+      <testcase name="testAddChild" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="95" assertions="4" time="0.000066"/>
+      <testcase name="testAddChildAlreadyAdded" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="106" assertions="1" time="0.000120"/>
+      <testcase name="testInsertChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="112" assertions="2" time="0.000066"/>
+      <testcase name="testInsertChildOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="121" assertions="1" time="0.000072"/>
+      <testcase name="testInsertChildNegativeRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="126" assertions="1" time="0.000098"/>
+      <testcase name="testGetChildAt" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="132" assertions="3" time="0.000117"/>
+      <testcase name="testGetChildAtOutOfRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="139" assertions="1" time="0.000082"/>
+      <testcase name="testGetChildAtNegativeRange" class="TS\Data\Tree\Test\ChildrenTest" classname="TS.Data.Tree.Test.ChildrenTest" file="E:\dev\data-tree\tests\ChildrenTest.php" line="144" assertions="1" time="0.000079"/>
     </testsuite>
-    <testsuite name="TS\Data\Tree\Test\DocTest" file="E:\dev\data-tree\tests\DocTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000260">
-      <testcase name="test" class="TS\Data\Tree\Test\DocTest" classname="TS.Data.Tree.Test.DocTest" file="E:\dev\data-tree\tests\DocTest.php" line="17" assertions="1" time="0.000260"/>
+    <testsuite name="TS\Data\Tree\Test\DocTest" file="E:\dev\data-tree\tests\DocTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000178">
+      <testcase name="test" class="TS\Data\Tree\Test\DocTest" classname="TS.Data.Tree.Test.DocTest" file="E:\dev\data-tree\tests\DocTest.php" line="17" assertions="1" time="0.000178"/>
     </testsuite>
-    <testsuite name="TS\Data\Tree\Test\LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" tests="12" assertions="22" errors="0" failures="0" skipped="0" time="0.002475">
-      <testcase name="testAncestors" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="17" assertions="3" time="0.000580"/>
-      <testcase name="testAncestorsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="25" assertions="2" time="0.000406"/>
-      <testcase name="testAncestor" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="34" assertions="2" time="0.000414"/>
-      <testcase name="testDescendants" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="46" assertions="1" time="0.000150"/>
-      <testcase name="testDescendantsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="52" assertions="2" time="0.000125"/>
-      <testcase name="testDescendant" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="61" assertions="2" time="0.000150"/>
-      <testcase name="testSiblings" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="73" assertions="2" time="0.000119"/>
-      <testcase name="testSiblingsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="83" assertions="2" time="0.000102"/>
-      <testcase name="testSibling" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="92" assertions="2" time="0.000106"/>
-      <testcase name="testChildren" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="104" assertions="1" time="0.000133"/>
-      <testcase name="testChild" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="112" assertions="2" time="0.000102"/>
-      <testcase name="testFindRootNode" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="124" assertions="1" time="0.000088"/>
+    <testsuite name="TS\Data\Tree\Test\LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" tests="12" assertions="22" errors="0" failures="0" skipped="0" time="0.000915">
+      <testcase name="testAncestors" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="17" assertions="3" time="0.000119"/>
+      <testcase name="testAncestorsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="25" assertions="2" time="0.000072"/>
+      <testcase name="testAncestor" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="34" assertions="2" time="0.000071"/>
+      <testcase name="testDescendants" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="46" assertions="1" time="0.000068"/>
+      <testcase name="testDescendantsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="52" assertions="2" time="0.000070"/>
+      <testcase name="testDescendant" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="61" assertions="2" time="0.000079"/>
+      <testcase name="testSiblings" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="73" assertions="2" time="0.000077"/>
+      <testcase name="testSiblingsWhere" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="83" assertions="2" time="0.000077"/>
+      <testcase name="testSibling" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="92" assertions="2" time="0.000067"/>
+      <testcase name="testChildren" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="104" assertions="1" time="0.000074"/>
+      <testcase name="testChild" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="112" assertions="2" time="0.000083"/>
+      <testcase name="testFindRootNode" class="TS\Data\Tree\Test\LookupTest" classname="TS.Data.Tree.Test.LookupTest" file="E:\dev\data-tree\tests\LookupTest.php" line="124" assertions="1" time="0.000058"/>
     </testsuite>
-    <testsuite name="TS\Data\Tree\Test\ProtectedAccess\AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.000197">
-      <testcase name="testClassUsingNodeTrait" class="TS\Data\Tree\Test\ProtectedAccess\AccessTest" classname="TS.Data.Tree.Test.ProtectedAccess.AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" line="30" assertions="1" time="0.000130"/>
-      <testcase name="testClassExtendingNode" class="TS\Data\Tree\Test\ProtectedAccess\AccessTest" classname="TS.Data.Tree.Test.ProtectedAccess.AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" line="37" assertions="1" time="0.000067"/>
+    <testsuite name="TS\Data\Tree\Test\ProtectedAccess\AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.000104">
+      <testcase name="testClassUsingNodeTrait" class="TS\Data\Tree\Test\ProtectedAccess\AccessTest" classname="TS.Data.Tree.Test.ProtectedAccess.AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" line="30" assertions="1" time="0.000058"/>
+      <testcase name="testClassExtendingNode" class="TS\Data\Tree\Test\ProtectedAccess\AccessTest" classname="TS.Data.Tree.Test.ProtectedAccess.AccessTest" file="E:\dev\data-tree\tests\Protected\AccessTest.php" line="37" assertions="1" time="0.000046"/>
     </testsuite>
-    <testsuite name="TS\Data\Tree\Test\ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.002305">
-      <testcase name="testFoo" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="18" assertions="1" time="0.001322"/>
-      <testcase name="testBar" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="24" assertions="1" time="0.000714"/>
-      <testcase name="testFooWithAttribute" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="30" assertions="1" time="0.000269"/>
+    <testsuite name="TS\Data\Tree\Test\ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" tests="3" assertions="3" errors="0" failures="0" skipped="0" time="0.001335">
+      <testcase name="testFoo" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="18" assertions="1" time="0.000770"/>
+      <testcase name="testBar" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="24" assertions="1" time="0.000386"/>
+      <testcase name="testFooWithAttribute" class="TS\Data\Tree\Test\ToStringTest" classname="TS.Data.Tree.Test.ToStringTest" file="E:\dev\data-tree\tests\ToStringTest.php" line="30" assertions="1" time="0.000179"/>
     </testsuite>
   </testsuite>
 </testsuites>
