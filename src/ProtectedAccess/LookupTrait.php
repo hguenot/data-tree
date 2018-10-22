@@ -12,7 +12,6 @@ use TS\Data\Tree\Traits\LookupTrait as Source;
 trait LookupTrait {
 
 	use Source {
-		getChildren as protected;
 		descendant as protected;
 		ancestor as protected;
 		child as protected;

@@ -10,10 +10,11 @@ namespace TS\Data\Tree\Traits;
 use InvalidArgumentException;
 use LogicException;
 use OutOfRangeException;
+use TS\Data\Tree\Interfaces\MutableNode;
 use TS\Data\Tree\Interfaces\Node;
 
 /**
- * @see Node
+ * @see MutableNode
  */
 trait ChildrenTrait {
 
@@ -124,7 +125,10 @@ trait ChildrenTrait {
 		if (null == $p) {
 			throw new LogicException();
 		}
-		$p->removeChildAt($this->getChildIndex());
+		if ($p instanceof MutableNode)
+			$p->removeChildAt($this->getChildIndex());
+		else
+			throw new LogicException('Could not remove child of a readonly node');
 
 		/**@var Node $this */
 		return $this;
@@ -141,6 +145,7 @@ trait ChildrenTrait {
 	 */
 	public function removeChildAt(int $index): Node {
 		$node = $this->getChildAt($index);
+		/** @var ChildrenTrait $node */
 
 		// re-wire new node and remove
 		$node->node_parent = null;

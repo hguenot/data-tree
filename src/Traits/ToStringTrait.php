@@ -8,6 +8,7 @@
 namespace TS\Data\Tree\Traits;
 
 use ReflectionClass;
+use TS\Data\Tree\Interfaces\Attributes;
 
 trait ToStringTrait {
 
@@ -19,7 +20,7 @@ trait ToStringTrait {
 	public function __toString() {
 		$class = self::getShortClassName($this);
 		$attrs = [];
-		if (method_exists($this, 'getAttributes')) {
+		if ($this instanceof Attributes) {
 			$attrs = $this->getAttributes();
 		}
 		if (!empty($attrs)) {

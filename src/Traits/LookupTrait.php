@@ -10,21 +10,10 @@ namespace TS\Data\Tree\Traits;
 use TS\Data\Tree\Interfaces\Lookup;
 use TS\Data\Tree\Interfaces\Node;
 
+/**
+ * @see Lookup
+ */
 trait LookupTrait {
-
-	/**
-	 * Get all children.
-	 *
-	 * @return Lookup[] Children nodes
-	 */
-	abstract public function getChildren(): array;
-
-	/**
-	 * Get parent node.
-	 *
-	 * @return Node|null Parent node
-	 */
-	abstract public function getParent(): ?Node;
 
 	/**
 	 * Find a specific descendant.
@@ -130,9 +119,15 @@ trait LookupTrait {
 			if ($where === null || $where($child)) {
 				yield $child;
 			}
-			foreach ($child->descendants($where) as $c) {
-				yield $c;
+
+			if ($child instanceof Lookup) {
+				foreach ($child->descendants($where) as $c) {
+					yield $c;
+				}
+			} else {
+				throw new \LogicException('Could find descendants only of Lookup class');
 			}
+			/** @var Lookup $child */
 		}
 	}
 
@@ -145,6 +140,7 @@ trait LookupTrait {
 	 */
 	public function siblings(?callable $where = null): \Generator {
 		$p = $this->getParent();
+		/** @var Node $p */
 		if ($p !== null) {
 			foreach ($p->getChildren() as $child) {
 				if ($child === $this) {
@@ -159,7 +155,7 @@ trait LookupTrait {
 
 	/**
 	 * Find the root node.
-	 * @return Lookup
+	 * @return Node
 	 */
 	public function findRootNode(): Node {
 		$p = $this;
