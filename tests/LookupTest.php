@@ -134,7 +134,7 @@ class LookupTest extends TestCase
 	private $ab;
 	private $aaa;
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		$this->root = new Node();
 		$this->root->setAttribute('name', 'root');
@@ -157,7 +157,7 @@ class LookupTest extends TestCase
 		
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 		$this->root = null;
 		$this->a = null;

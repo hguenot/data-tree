@@ -55,7 +55,7 @@ class AttributesTest extends TestCase
 
 	private $n;
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		$this->n = new Node();
 		$this->n->setAttribute('str', 'STR');
@@ -63,7 +63,7 @@ class AttributesTest extends TestCase
 	
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 		$this->n = null;
 	}

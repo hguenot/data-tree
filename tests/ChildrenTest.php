@@ -159,7 +159,7 @@ class ChildrenTest extends TestCase
 	/** @var Node */
 	private $c;
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		$this->root = new Node();
 		
@@ -173,7 +173,7 @@ class ChildrenTest extends TestCase
 		$this->root->addChild($this->c);
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 		$this->root = null;
 		$this->a = null;

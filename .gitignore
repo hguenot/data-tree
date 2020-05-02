@@ -1,6 +1,7 @@
 vendor/*
 .vagrant
 composer.phar
+composer.lock
 /vendor/
 .DS_Store
 data-tree.iml
